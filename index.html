@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover"
+    />
+    <title>ระบบสืบค้นข้อมูลความปลอดภัยเขื่อน</title>
+
+    <!-- Line SDK -->
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+
+    <!-- fonts -->
+    <!-- <link rel="stylesheet" href="https://misfund.rid.go.th/mis_fund/public/fonts/thsarabunnew.css"/> -->
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script> -->
+
+    <!-- bootstrap -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- select2 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- galleria -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.6.1/themes/classic/galleria.classic.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.6.1/galleria.min.js"></script>
+
+    <!-- fa icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
+
+    <style></style>
+  </head>
+
+  <body id="body" class="thsarabunnew" style="overflow: inherit !important">
+    <div class="container">
+      <section id="header" style="text-align: center">
+        <h2>สืบค้นข้อมูลเขื่อน</h2>
+      </section>
+
+      <section hidden id="section_filterDam" class="mb-t">
+        <section id="profile">
+          <!-- <img id="pictureUrl" src="https://mokmoon.com/images/ic_liff.png" /> -->
+          <!-- <p id="userId"></p> -->
+          <!-- <p id="displayName"></p> -->
+          <!-- <p id="statusMessage"></p>
+          <p id="email"></p> -->
+
+          <input hidden type="text" id="userId" />
+          <input hidden type="text" id="selectDam" />
+        </section>
+
+        <div class="form-row">
+          <div class="col">
+            <label for="selectDamtype">ประเภทเขื่อน :</label>
+            <select
+              class="form-control select2"
+              name="selectDamtype"
+              id="selectDamtype"
+            >
+              <option value="">เลือกประเภทเขื่อน</option>
+              <option value="2">ขนาดเล็ก</option>
+              <option value="1">ขนาดกลาง</option>
+              <option value="0">ขนาดใหญ่</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="selectDepartment">สำนักงานชลประทาน :</label>
+            <select
+              class="form-control select2"
+              name="selectDepartment"
+              id="selectDepartment"
+            >
+              <option value="">เลือกสำนักงานชลประทาน</option>
+              <option value="1">สำนักงานชลประทานที่ 1</option>
+              <option value="2">สำนักงานชลประทานที่ 2</option>
+              <option value="3">สำนักงานชลประทานที่ 3</option>
+              <option value="4">สำนักงานชลประทานที่ 4</option>
+              <option value="5">สำนักงานชลประทานที่ 5</option>
+              <option value="6">สำนักงานชลประทานที่ 6</option>
+              <option value="7">สำนักงานชลประทานที่ 7</option>
+              <option value="8">สำนักงานชลประทานที่ 8</option>
+              <option value="9">สำนักงานชลประทานที่ 9</option>
+              <option value="10">สำนักงานชลประทานที่ 10</option>
+              <option value="11">สำนักงานชลประทานที่ 11</option>
+              <option value="12">สำนักงานชลประทานที่ 12</option>
+              <option value="13">สำนักงานชลประทานที่ 13</option>
+              <option value="14">สำนักงานชลประทานที่ 14</option>
+              <option value="15">สำนักงานชลประทานที่ 15</option>
+              <option value="16">สำนักงานชลประทานที่ 16</option>
+              <option value="17">สำนักงานชลประทานที่ 17</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="selectProvince">จังหวัด :</label>
+            <select
+              class="form-control select2"
+              name="selectProvince"
+              id="selectProvince"
+            >
+              <option value="">เลือกจังหวัด</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="inputDam">ค้นหาเขื่อน :</label>
+            <!-- <input
+              id="inputDam"
+              type="text"
+              class="form-control"
+              placeholder="กรอกชื่อเขื่อน"
+              style="height: 35px !important; border: 1px solid #aaa"
+            /> -->
+
+            <div class="input-group">
+              <input
+                id="inputDam"
+                type="text"
+                class="form-control"
+                placeholder="กรอกชื่อเขื่อน"
+                style="height: 35px !important; border: 1px solid #aaa"
+              />
+              <div class="input-group-append">
+                <button
+                  id="inputDam_btn"
+                  class="btn btn-secondary"
+                  type="button"
+                  style="margin: 0; height: 100%"
+                >
+                  <i class="fa fa-search"></i> ค้นหา
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div hidden class="form-row">
+          <section id="button">
+            <button class="btn btn-primary" id="btnSend">Send</button>
+            <!-- <button class="btn btn-success" id="btnLogIn">Log In</button> -->
+            <!-- <button class="btn btn-danger" id="btnLogOut">Log Out</button> -->
+          </section>
+        </div>
+      </section>
+
+      <!-- Modal Loading -->
+      <div class="modal fade" id="loadModal" role="dialog">
+        <div class="modal-dialog" style="text-align: center; margin-top: 50vh">
+          <!-- Loading -->
+          <div
+            class="spinner-border"
+            role="status"
+            style="width: 20vw; height: 20vw"
+          ></div>
+          <!-- border: 0.5em solid currentColor; -->
+        </div>
+      </div>
+
+      <div hidden id="div_content">
+        <!-- <section
+          id="section_content"
+          class="section_content"
+          style="margin-top: 2%"
+        >
+          <div class="row">
+            <p>ต.sub_district_name, อ.district_name, จ.province_name</p>
+            <div class="col-8">
+              <h5>dam_name</h5>
+            </div>
+            <div class="col-4">
+              <h5>col-4</h5>
+            </div>
+          </div>
+        </section> -->
+      </div>
+
+      <section hidden id="div_damname">aaaa</section>
+
+      <section hidden id="section_info">
+        <!-- <p>section_info</p> -->
+      </section>
+
+      <section hidden id="section_mechanic">
+        <!-- <p>section_mechanic</p> -->
+      </section>
+
+      <section hidden id="section_water">
+        <!-- <p>section_water</p> -->
+      </section>
+
+      <section hidden id="section_gallery">
+        <!-- <p>section_gallery</p> -->
+        <div id="galleria">
+          data-title data-description
+          <a
+            href="https://images.unsplash.com/28/the-way.JPG?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1185&q=80"
+          >
+            <img
+              src="https://images.unsplash.com/28/the-way.JPG?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1185&q=80"
+              title="Title"
+              alt="Detail..."
+            />
+          </a>
+          <a
+            href="https://images.unsplash.com/photo-1433424007598-bd5d102e8597?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1433424007598-bd5d102e8597?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            />
+          </a>
+          <a href="https://www.youtube.com/watch?v=YiNLoWzm_IE">
+            <span class="video">Works for youtube too.</span>
+          </a>
+          <a
+            href="http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Locomotives-Roundhouse2.jpg/1000px-Locomotives-Roundhouse2.jpg"
+          >
+            <img
+              src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Locomotives-Roundhouse2.jpg/100px-Locomotives-Roundhouse2.jpg"
+              title="Locomotives Roundhouse"
+              alt="Steam locomotives of the Chicago &amp; North Western Railway."
+            />
+          </a>
+        </div>
+      </section>
+
+      <section hidden id="section_menu">
+        <div class="row">
+          <div class="col div_menu">
+            <a href="">
+              <img
+                width="80%"
+                src="https://cdn-icons-png.flaticon.com/512/4978/4978389.png"
+              />
+              ข้อมูล<br />ทางวิศกรรม
+            </a>
+          </div>
+          <div class="col div_menu bg_menu_center">
+            <a href="">
+              <img
+                width="80%"
+                src="https://cdn-icons-png.flaticon.com/512/3226/3226426.png"
+              />
+              ระดับน้ำและความจุ
+            </a>
+          </div>
+          <div class="col div_menu bg_menu_right">
+            <a href="">
+              <img
+                width="80%"
+                src="https://cdn-icons-png.flaticon.com/512/1829/1829589.png"
+              />
+              อัลบั้มภาพ
+            </a>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <button style="width: auto" id="btn_goToTop">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+      </button>
+    </div>
+  </body>
+</html>

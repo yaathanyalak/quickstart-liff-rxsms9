@@ -1,0 +1,142 @@
+{
+  "line": {
+    "type": "flex",
+    "contents": {
+      "body": {
+        "action": {
+          "type": "postback",
+          "label": "action",
+          "data": "hello"
+        },
+        "layout": "horizontal",
+        "contents": [
+          {
+            "url": "https://cdn-icons.flaticon.com/png/512/3574/premium/3574296.png?token=exp=1643707122~hmac=a8aacd082d4240d46d2c0638df192654",
+            "size": "md",
+            "gravity": "center",
+            "type": "image"
+          },
+          {
+            "size": "md",
+            "gravity": "center",
+            "text": "ข้อมูลเขื่อนทั่วไป",
+            "weight": "bold",
+            "type": "text"
+          }
+        ],
+        "type": "box",
+        "background": {
+          "endColor": "#b87979",
+          "startColor": "#b87979",
+          "centerPosition": "50%",
+          "centerColor": "#ffaaaa",
+          "angle": "0deg",
+          "type": "linearGradient"
+        }
+      },
+      "hero": {
+        "aspectRatio": "20:13",
+        "size": "full",
+        "type": "image",
+        "url": "https://sawasdeenews.com/wp-content/uploads/2018/08/%E0%B9%80%E0%B8%82%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99.jpg",
+        "aspectMode": "cover"
+      },
+      "styles": {
+        "header": {
+          "backgroundColor": "#849EBF"
+        }
+      },
+      "footer": {
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "backgroundColor": "#aaffaa",
+            "paddingAll": "sm",
+            "justifyContent": "center",
+            "alignItems": "center",
+            "contents": [
+              {
+                "url": "https://cdn-icons.flaticon.com/png/512/1208/premium/1208525.png?token=exp=1643707257~hmac=8d7e3449f560849c95ff216b1e4a9a64",
+                "type": "image",
+                "size": "xs"
+              },
+              {
+                "size": "xs",
+                "type": "text",
+                "text": "ข้อมูล"
+              },
+              {
+                "type": "text",
+                "size": "xs",
+                "text": "ทางวิศวกรรม"
+              }
+            ]
+          },
+          {
+            "contents": [
+              {
+                "type": "image",
+                "url": "https://cdn-icons-png.flaticon.com/512/3226/3226426.png",
+                "size": "xs"
+              },
+              {
+                "text": "ระดับน้ำและ",
+                "size": "xs",
+                "type": "text"
+              },
+              {
+                "text": "ความจุ",
+                "size": "xs",
+                "type": "text"
+              }
+            ],
+            "layout": "vertical",
+            "backgroundColor": "#fffaaa",
+            "justifyContent": "center",
+            "alignItems": "center",
+            "paddingAll": "sm",
+            "type": "box"
+          },
+          {
+            "backgroundColor": "#aadeff",
+            "type": "box",
+            "paddingAll": "sm",
+            "justifyContent": "center",
+            "contents": [
+              {
+                "type": "image",
+                "url": "https://cdn-icons-png.flaticon.com/512/1829/1829589.png",
+                "size": "xs"
+              },
+              {
+                "size": "xs",
+                "type": "text",
+                "text": "รูปเขื่อน"
+              }
+            ],
+            "layout": "vertical",
+            "alignItems": "center"
+          }
+        ],
+        "type": "box",
+        "paddingAll": "none"
+      },
+      "header": {
+        "layout": "vertical",
+        "type": "box",
+        "contents": [
+          {
+            "type": "text",
+            "text": "$any",
+            "size": "xl",
+            "weight": "bold"
+          }
+        ]
+      },
+      "type": "bubble"
+    },
+    "altText": "Flex Message"
+  }
+}

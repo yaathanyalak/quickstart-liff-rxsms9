@@ -1,0 +1,304 @@
+/* @import url(https://misfund.rid.go.th/mis_fund/public/fonts/thsarabunnew.css); */
+@import url(https://raw.githubusercontent.com/Phonbopit/sarabun-webfont/master/style.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;400&family=Sarabun:wght@400;700&display=swap');
+
+/* Toggle dam content */
+#inputDamautocomplete-list {
+  position: absolute;
+}
+
+/* Button go to Top */
+#btn_goToTop {
+  display: none;
+  position: fixed;
+  bottom: 5vw;
+  right: 5vw;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: goldenrod;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+/* Autocomplete search dam's content */
+input[type='text'] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+.autocomplete-items {
+  position: inherit;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+/* This rule is read by Galleria to define the gallery height: */
+#galleria {
+  /* width: 100%; */
+  /* height: 250px; 849EBF*/
+}
+
+.galleria-errors {
+  display: none;
+}
+:root {
+  --primary-light: #8abdff;
+  --primary: #6d5dfc;
+  --primary-dark: #5b0eeb;
+  --white: #ffffff;
+  --greyLight-1: #e4ebf5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
+  --color-primary: #7380ec;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1, 2rem;
+
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+html {
+  font-size: 12px !important;
+}
+
+body {
+  /* margin: 20px; */
+  font-family: 'Prompt', 'Sarabun', sans-serif !important;
+  background: var(--color-background);
+  overflow: hidden;
+
+  margin-right: auto;
+  margin-left: auto;
+  /* margin-bottom: 15px;
+
+  /* display: block; */
+  position: relative;
+  min-height: 100vh;
+  max-width: 100%;
+}
+.font-weight-bold {
+  font-weight: 700;
+}
+button {
+  display: none;
+  width: 100%;
+  padding: 8px 0;
+  margin: 8px auto;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+p {
+  /* border-bottom: 1px dashed #ddd; */
+}
+label {
+  padding-top: 15px;
+}
+
+span.font-dotted {
+  border-bottom: 1px dotted #ddd;
+}
+
+#pictureUrl {
+  margin: 0 auto;
+  width: 32%;
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  box-pack: center;
+  box-align: center;
+  -moz-border-radius: 256px;
+  -webkit-border-radius: 256px;
+  border-radius: 256px;
+}
+
+#accessToken,
+#utouId {
+  display: block;
+  overflow: auto;
+}
+
+#header {
+  /* display: flex; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4.3rem;
+  /* display:-ms-flexbox; */
+  /* flex-wrap: wrap; */
+  /* text-align: center;
+  align-items: center; */
+
+  padding: 0.5rem 0.8rem;
+  /* padding-left: 15px; */
+  /* margin-right: auto;
+  margin-left: auto; */
+  margin: -5px 0px;
+
+  color: #ffffff;
+  /* background: var(--color-white) !important; */
+  background: linear-gradient(45deg, #484c91, #30b8d2);
+
+  /* padding: var(--card-padding); */
+
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  z-index: 1;
+}
+#header h2 {
+  text-align: center;
+  /* font-weight: bold; */
+  font-size: 1.5rem;
+  width: 100%;
+}
+/* .form-row>div */
+#section_filterDam,
+#section_info,
+#section_mechanic,
+#section_water,
+#section_gallery,
+.section_content {
+  position: relative;
+  /* display: flex; */
+
+  background: var(--color-white) !important;
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 1rem 1rem var(--color-light);
+  transition: all 300ms ease;
+}
+#section_info:hover,
+#section_info:hover,
+#section_mechanic:hover,
+#section_water:hover,
+#section_filterDam:hover,
+.section_content:focus {
+  box-shadow: var(--box-shadow);
+}
+.mb-t {
+  margin-top: 6rem;
+}
+
+#div_damname {
+  margin-top: 6rem;
+  margin-bottom: 1em;
+  position: relative;
+  text-align: center;
+  /* color: #ffffff; */
+
+  background: var(--color-white) !important;
+  /* background: linear-gradient(45deg, #484c91, #30b8d2); */
+  padding: var(--padding-1);
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 1rem 1rem var(--color-light);
+  transition: all 300ms ease;
+}
+
+.div_menu {
+  width: auto;
+  display: inline-grid;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  margin: 1rem;
+  position: relative;
+  color: #ffffff;
+  background: linear-gradient(45deg, #484c91, #5b97f2);
+
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 1rem 1rem var(--color-light);
+  transition: all 300ms ease;
+}
+.div_menu img {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  object-fit: contain;
+}
+.div_menu a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.bg_menu_center {
+  background: linear-gradient(45deg, #5b97f2, #59355d);
+}
+.bg_menu_right {
+  background: linear-gradient(45deg, #59355d, #30b8d2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  /* margin: 15px; */
+  padding: 10px;
+}
+.select2-selection__rendered {
+  line-height: 31px !important;
+}
+.select2-container .select2-selection--single {
+  height: 35px !important;
+}
+.select2-selection__arrow {
+  height: 34px !important;
+  /* width: auto; */
+}
+#section_filterDam section#button > .btn-success {
+  /* top:.4rem; */
+  display: inline-block;
+  /* color: var(--color-dark); */
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 4/5;
+  background: var(--primary);
+  box-shadow: inset 0.2rem 0.2rem 1rem var(--primary-light),
+    inset -0.2rem -0.2rem 1rem var(--primary-dark),
+    0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+  color: var(--greyLight-1);
+}
+.info {
+  padding: var(--card-padding);
+}

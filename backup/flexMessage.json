@@ -1,0 +1,136 @@
+{
+  "line": {
+    "altText": "Flex Message",
+    "contents": {
+      "hero": {
+        "aspectMode": "cover",
+        "aspectRatio": "20:13",
+        "action": {
+          "type": "uri",
+          "uri": "http://linecorp.com/"
+        },
+        "url": "https://sawasdeenews.com/wp-content/uploads/2018/08/%E0%B9%80%E0%B8%82%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99.jpg",
+        "type": "image",
+        "size": "full"
+      },
+      "type": "bubble",
+      "styles": {
+        "body": {
+          "backgroundColor": "#ffaaaa"
+        },
+        "header": {
+          "backgroundColor": "#849EBF"
+        }
+      },
+      "header": {
+        "layout": "vertical",
+        "contents": [
+          {
+            "size": "xl",
+            "weight": "bold",
+            "type": "text",
+            "text": "รหัสอ้างอิงจังหวัดคือ $any"
+          }
+        ],
+        "type": "box"
+      },
+      "footer": {
+        "contents": [
+          {
+            "paddingAll": "sm",
+            "justifyContent": "center",
+            "contents": [
+              {
+                "url": "https://cdn-icons.flaticon.com/png/512/1208/premium/1208525.png?token=exp=1642063190~hmac=24ebe7a3efc41a49165e61706a2fa9b1",
+                "type": "image",
+                "size": "xs"
+              },
+              {
+                "text": "ข้อมูล",
+                "size": "xs",
+                "type": "text"
+              },
+              {
+                "text": "ทางวิศวกรรม",
+                "size": "xs",
+                "type": "text"
+              }
+            ],
+            "layout": "vertical",
+            "backgroundColor": "#aaffaa",
+            "alignItems": "center",
+            "type": "box"
+          },
+          {
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "image",
+                "size": "xs",
+                "url": "https://cdn-icons-png.flaticon.com/512/3226/3226426.png"
+              },
+              {
+                "type": "text",
+                "size": "xs",
+                "text": "ระดับน้ำและ"
+              },
+              {
+                "size": "xs",
+                "text": "ความจุ",
+                "type": "text"
+              }
+            ],
+            "justifyContent": "center",
+            "paddingAll": "sm",
+            "backgroundColor": "#fffaaa",
+            "type": "box",
+            "alignItems": "center"
+          },
+          {
+            "layout": "vertical",
+            "type": "box",
+            "paddingAll": "sm",
+            "justifyContent": "center",
+            "backgroundColor": "#aadeff",
+            "alignItems": "center",
+            "contents": [
+              {
+                "url": "https://cdn-icons-png.flaticon.com/512/1829/1829589.png",
+                "type": "image",
+                "size": "xs"
+              },
+              {
+                "size": "xs",
+                "type": "text",
+                "text": "รูปเขื่อน"
+              }
+            ]
+          }
+        ],
+        "paddingAll": "none",
+        "type": "box",
+        "layout": "horizontal"
+      },
+      "body": {
+        "type": "box",
+        "contents": [
+          {
+            "size": "md",
+            "gravity": "center",
+            "url": "https://cdn-icons.flaticon.com/png/512/3574/premium/3574296.png?token=exp=1642062445~hmac=d4795a17c88b2f177967c4ce34c53379",
+            "type": "image"
+          },
+          {
+            "weight": "bold",
+            "text": "ข้อมูลเขื่อนทั่วไป",
+            "type": "text",
+            "gravity": "center",
+            "size": "md"
+          }
+        ],
+        "layout": "horizontal"
+      }
+    },
+    "type": "flex"
+  }
+}
